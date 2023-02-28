@@ -16,6 +16,7 @@ $ winpty docker run --rm -it -v "/$(pwd -W):/ruby" -p 3000:3000 registry.gitlab.
 
 # linux bash
 $ docker run --rm -it -v $PWD:/ruby -p 3000:3000 registry.gitlab.railsformers.com/osu/osu-rails-3
+$ docker run --rm -it -v $PWD:/ruby -p 3000:3000 registry.gitlab.railsformers.com/osu/osu-rails-3 rails -T
 ```
 
 VirtualBox image:
@@ -25,5 +26,5 @@ https://drive.google.com/file/d/1KJsMIWKaeDn5jaGxnp54roZE8_TC25Fe/view
 
 ### 1. Environments
 
-`config/environments/*`
+`config/environments/*`\
 development, test, production
