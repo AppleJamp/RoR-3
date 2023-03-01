@@ -74,8 +74,6 @@ GEM
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
     bindex (0.8.1)
-    bootsnap (1.16.0)
-      msgpack (~> 1.2)
     bootstrap (5.2.3)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 2.11.6, < 3)
@@ -118,7 +116,6 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.2)
     minitest (5.17.0)
-    msgpack (1.6.0)
     net-imap (0.3.4)
       date
       net-protocol
@@ -242,7 +239,6 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
-  bootsnap
   bootstrap (~> 5.2.2)
   byebug
   cancancan
