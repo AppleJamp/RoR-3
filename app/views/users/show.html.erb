@@ -1,0 +1,15 @@
+<h1>User detail</h1>
+
+<% if notice %>
+  <div class="alert alert-success">
+    <%= notice %>
+  </div>
+<% end %>
+
+<%= render @user %>
+
+<div>
+  <%= link_to "Back to users", users_path, class: 'btn btn-secondary' %> |
+  <%= link_to "Edit this user", edit_user_path(@user), class: 'btn btn-primary' %> |
+  <%= link_to "Destroy this user", @user, data: { "turbo-method": :delete, "turbo-confirm": "Are you sure?" }, class: 'btn btn-danger' %>
+</div>

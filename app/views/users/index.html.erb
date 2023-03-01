@@ -1,0 +1,60 @@
+<h1>Users</h1>
+
+<% if notice %>
+  <div class="alert alert-success">
+    <%= notice %>
+  </div>
+<% end %>
+
+<div class="text-right">
+  <%= link_to "New user", new_user_path, class: 'btn btn-primary' %>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>
+        <%= User.human_attribute_name(:first_name) %>
+      </th>
+      <th>
+        <%= User.human_attribute_name(:last_name) %>
+      </th>
+      <th>
+        <%= User.human_attribute_name(:email) %>
+      </th>
+      <th>
+        <%= User.human_attribute_name(:created_at) %>
+      </th>
+      <th>
+        <%= User.human_attribute_name(:updated_at) %>
+      </th>
+      <th>...</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td>
+          <%= user.first_name %>
+        </td>
+        <td>
+          <%= user.last_name %>
+        </td>
+        <td>
+          <%= user.email %>
+        </td>
+        <td>
+          <%= localize(user.created_at) %>
+        </td>
+        <td>
+          <%= l(user.updated_at) %>
+        </td>
+        <td>
+          <%= link_to "Detail", user, class: 'btn btn-xs btn-info' %>
+          <%= link_to "Edit", edit_user_path(user), class: 'btn btn-primary' %>
+          <%= link_to "Destroy", user, data: { "turbo-method": :delete, "turbo-confirm": "Are you sure?" }, class: 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

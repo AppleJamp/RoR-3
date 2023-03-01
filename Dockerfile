@@ -1,6 +1,6 @@
 FROM ruby:3.2-alpine
-# yarn vips-dev
-RUN apk add bash bash build-base tzdata nodejs yarn sqlite sqlite-dev
+# vips-dev
+RUN apk add bash bash build-base tzdata nodejs yarn sqlite sqlite-dev imagemagick-dev imagemagick sassc
 
 WORKDIR /ruby
 COPY Gemfile /ruby/Gemfile
