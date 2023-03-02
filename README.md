@@ -47,6 +47,9 @@ $ docker run --rm -it -v $PWD:/ruby registry.gitlab.railsformers.com/osu/osu-rai
 
 ## 1. Rails bootstrap
 
+https://guides.rubyonrails.org/getting_started.html \
+https://api.rubyonrails.org/
+
 ### 1.1 Config
 
 * Environments -
@@ -58,36 +61,37 @@ config/environments/
 
 * Initializers - 
 Při změně je třeba restartovat aplikaci
+https://guides.rubyonrails.org/configuring.html#using-initializer-files
 ```
 config/initializers/
 ```
 
-* Locales
+* Locales [Overview](https://guides.rubyonrails.org/i18n.html)
 ```
 config/locales/
 ```
 
-* application.rb
+* application.rb [Overview](https://edgeguides.rubyonrails.org/configuring.html)
 
-* database.yml
+* database.yml [Overview](https://guides.rubyonrails.org/getting_started.html#configuring-a-database)
 
-* routes.rb
+* routes.rb [Overview](https://apidock.com/rails/ActionDispatch/Routing)
 
 ### 1.2 DB
 
-* Migrations
+* Migrations [Overview](https://apidock.com/rails/ActiveRecord/Migration)
 
 * Seeds
 
-* Schema
+* Schema [Overview](https://apidock.com/rails/ActiveRecord/Schema)
 
 ### 1.3 App
 
-* Models
+* Models - [Overview](https://guides.rubyonrails.org/active_record_basics.html) [Methods](https://apidock.com/rails/v6.1.3.1/ActiveRecord/Base)
 
-* Views - bootstrap, https://getbootstrap.com/docs/5.2/examples/
+* Controllers - [Overview](https://guides.rubyonrails.org/action_controller_overview.html) [Methods](https://apidock.com/rails/ActionController/Bases)
 
-* Controllers
+* Views - [Overview](https://guides.rubyonrails.org/layouts_and_rendering.html) [Bootstrap examples](https://getbootstrap.com/docs/5.2/examples/) [Methods](https://apidock.com/rails/ActionView/Layouts)
 
 ## 2. Úlohy k procvičení
 
