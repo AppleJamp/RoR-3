@@ -12,38 +12,7 @@ $ git clone https://gitlab.railsformers.com/osu/osu-rails-3.git
 $ cd osu-rails-3
 ```
 
-Spuštění serveru - http://localhost:3000/
-
-```
-# win power shell
-$ docker run --rm -it -v ${PWD}:/ruby -p 3000:3000 registry.gitlab.railsformers.com/osu/osu-rails-3
-
-# win cmd
-$ docker run --rm -it -v %cd%:/ruby -p 3000:3000 registry.gitlab.railsformers.com/osu/osu-rails-3
-
-# win git bash
-$ winpty docker run --rm -it -v "/$(pwd -W):/ruby" -p 3000:3000 registry.gitlab.railsformers.com/osu/osu-rails-3
-
-# linux bash
-$ docker run --rm -it -v $PWD:/ruby -p 3000:3000 registry.gitlab.railsformers.com/osu/osu-rails-3
-```
-
-Spuštení interaktivní konzole nebo příkazu
-
-```
-# win power shell
-$ docker run --rm -it -v ${PWD}:/ruby registry.gitlab.railsformers.com/osu/osu-rails-3 rails c
-
-# win cmd
-$ docker run --rm -it -v %cd%:/ruby registry.gitlab.railsformers.com/osu/osu-rails-3 rails c
-
-# win git bash
-$ winpty docker run --rm -it -v "/$(pwd -W):/ruby" registry.gitlab.railsformers.com/osu/osu-rails-3 rails c
-
-# linux bash
-$ docker run --rm -it -v $PWD:/ruby registry.gitlab.railsformers.com/osu/osu-rails-3 rails c
-```
-
+Spuštění serveru a interaktivní konzole, testů naleznete [zde](ENVIRONMENT.md)
 
 ## 1. Rails bootstrap
 
@@ -59,7 +28,7 @@ Při změně je třeba restartovat aplikaci
 config/environments/
 ```
 
-* Initializers - 
+* Initializers -
 Při změně je třeba restartovat aplikaci
 https://guides.rubyonrails.org/configuring.html#using-initializer-files
 ```
