@@ -1,1 +1,22 @@
-<h1><%= t(:hello) %></h1>
+<h1>Dashboard</h1>
+
+<h2>Seznam Projektů</h2>
+<table>
+  <thead>
+  <tr>
+    <th>Název projektu</th>
+    <th>Uživatel (Autor)</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @projects.each do |project| %>
+    <tr>
+      <td><%= project.name %></td>
+      <td><%= project.user.try(:email) %></td> <%# Nebo project.user.try(:name) %>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%# Odkaz na přidání nového projektu, pokud chceš %>
+<%= link_to 'Nový projekt', new_project_path %>

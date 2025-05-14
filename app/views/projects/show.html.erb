@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @project %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @project.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @project.user.try(:email) %> <%# Nebo @project.user.try(:name) %>
+</p>
+
+<div>
+  <%= link_to "Edit this project", edit_project_path(@project) %> |
+  <%= link_to "Back to projects", projects_path %>
+
+  <%= button_to "Destroy this project", @project, method: :delete %>
+</div>
